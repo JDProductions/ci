@@ -7,6 +7,7 @@
 	<h1>
 		<?php
 
+			
 			foreach ($results as $object) {
 				echo $object->username . "<br>";
 			}
