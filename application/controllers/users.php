@@ -6,10 +6,11 @@
  		//$this->load->model('user_model');
 
  		// get model function -> results is going to have an array of objects inside of it.
- 		$result = $this->user_model->get_users();
+ 		$data['results'] =  $this->user_model->get_users();
+
 
  			// load that view
-		$this->load->view('user_view');
+		$this->load->view('user_view', $data);
 
  	}
 
