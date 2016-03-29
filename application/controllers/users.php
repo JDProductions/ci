@@ -17,8 +17,12 @@
 
  		public function insert(){
 		// Insert some information
-		$this->user_model->create_users([
-			
+ 			$username = 'James';
+ 			$password = 'secret';
+
+		$this->user_model->create_user([
+			'username' => $username,
+			'password' => $password
 			]);
 	}
 

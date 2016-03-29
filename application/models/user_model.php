@@ -38,10 +38,11 @@ class User_model extends CI_Model
 
 
 	// Insert information to the database -> code igniter syntax
-	public create_users() {
-		$this->db->insert();
-	}
 
+	public function create_user($data)
+	{
+		$this->db->insert('users', $data);
+	}
 
 
 
