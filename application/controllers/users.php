@@ -15,16 +15,23 @@
 
  	}
 
- 		public function insert(){
+ 		public function update(){
 		// Insert some information
- 			$username = 'James';
- 			$password = 'secret';
+ 			$id = 3;
+ 			$username = 'Robert';
+ 			$password = 'updatedPasswrod';
 
-		$this->user_model->create_user([
+		$this->user_model->update_users([
 			'username' => $username,
 			'password' => $password
-			]);
+			], $id);
 	}
+
+		public function delete() {
+		$id = 3;
+		$this->user_model->delete_users($id);
+		}
+
 
 
  }
