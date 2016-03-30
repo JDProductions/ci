@@ -22,6 +22,7 @@
 			'name' => 'username',
 			'placeholder' => 'Enter Username',
 			);
+		
 	
 	// Apply values to form
 	 echo form_input($data); 
