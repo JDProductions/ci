@@ -46,10 +46,32 @@
  			$this->session->set_flashdata($data);
  			redirect('home');
  		}
+ 		else {
+ 			$username = $this->input->post('username');
+ 			$password = $this->input->post('password');
+
+ 			// Pass Username and password to the user_model
+ 			$user_id = $this->user_model->login_user($username, $password);
+
+
+ 		}
 
 
 
  		//echo $this->input->post('username');
+
+ 		if ($user_id) {
+ 			$user_data= array(
+ 				'user_id' => $user_id,
+ 				'username' => $username,
+ 				'logged_in' => true
+
+ 				);
+
+ 			$this->session->set_userdata($user_data);
+ 			$this->session->set_flashdata('login_success', 'You are now logged in');
+ 			redirect('home/index');
+ 		}
 
  	}
 
